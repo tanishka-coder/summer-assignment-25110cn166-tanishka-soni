@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+class Q13FibonacciSeries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        long a = 0, b = 1;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            sb.append(a).append(i == n - 1 ? "" : " ");
+            long next = a + b;
+            a = b;
+            b = next;
+        }
+        System.out.println(sb.toString());
+    }
+}
