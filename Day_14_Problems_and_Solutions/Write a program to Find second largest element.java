@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q55 {
+public class second largest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
