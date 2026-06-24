@@ -1,22 +1,13 @@
-import java.util.HashSet;
-
-public class RemoveDuplicateCharacters {
+public class Q93_CheckStringRotation {
     public static void main(String[] args) {
-        String str = "programming";
+        String str1 = "ABCD";
+        String str2 = "CDAB";
 
-        HashSet<Character> set = new HashSet<>();
-        String result = "";
-
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-
-            if (!set.contains(ch)) {
-                set.add(ch);
-                result += ch;
-            }
+        if (str1.length() == str2.length() &&
+            (str1 + str1).contains(str2)) {
+            System.out.println("String is Rotation");
+        } else {
+            System.out.println("String is Not Rotation");
         }
-
-        System.out.println("Original String: " + str);
-        System.out.println("After Removing Duplicates: " + result);
     }
 }
